@@ -1,0 +1,12 @@
+name        = Bootstrap Generator
+description = Bootstrap SASS sub theme generator.
+screenshot  = screenshot.png
+core        = 7.x
+
+; Regions
+regions[content] = Content
+
+; Features
+features[] = logo
+features[] = name
+features[] = favicon

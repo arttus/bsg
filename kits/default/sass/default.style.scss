@@ -71,14 +71,14 @@
 // Utility classes
 // -----------------------------------------------------------------------------
 @import "../assets/bootstrap-sass/assets/stylesheets/bootstrap-sprockets";
-@import "../assets/bootstrap-sass/assets/stylesheets/bootstrap-compass"; /* this is what does the trick in glyphicons for me! */
+@import "../assets/bootstrap-sass/assets/stylesheets/bootstrap-compass";
 @import "../assets/bootstrap-sass/assets/stylesheets/bootstrap/utilities";
 @import "../assets/bootstrap-sass/assets/stylesheets/bootstrap/responsive-utilities";
 
 
 // FontAwesome
 // -----------------------------------------------------------------------------
-@import "../assets/font-awesome/font-awesome";
+@import "../assets/font-awesome/scss/font-awesome";
 
 // Bootswatch
 // -----------------------------------------------------------------------------
@@ -107,4 +107,44 @@
 @import "../sass/base/typography";
 @import "layout/**/*";
 @import "components/**/*";
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

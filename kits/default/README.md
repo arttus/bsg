@@ -19,10 +19,12 @@ This starter theme assumes that you have:
 - Bootstrap in your themes folder (This is based off of this theme)
 - Jquery 1.9.1 or higher (Use jQuery_Update module for Drupal)
 - NPM (Node Package Manager) (NPM Version 2.x or greater)
-- Grunt, Gulp or compass installed in your dev enviroment 
+- Grunt, Gulp or Compass installed in your dev enviroment.
 
 
 ## Setup {#setup}
+The instructions provided here are for getting your theme setup using Grunt.
+First you will need a functional NodeJS, NPM Grunt installations in your dev enviroment.
 Download this project into your sites/all/themes folder of your Drupal
 installation.
 
@@ -87,3 +89,10 @@ Please refer to the @link registry Theme Registry @endlink topic.
 [Bootstrap Framework]: http://getbootstrap.com
 [Bootstrap Framework Source Files]: https://github.com/twbs/bootstrap/releases
 [SASS]: http://sass-lang.com/
+
+## Caveats 
+We have included a npm_post.sh file until this issue is fixed in Drupal Core https://www.drupal.org/node/2349457
+If you still run into Segfaults you may find running this command in the root of your theme
+the quickest fix.
+
+'find node_modules -type f -name '*.info' | xargs rm;'

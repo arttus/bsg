@@ -192,7 +192,7 @@ function drush_bsg($name = NULL, $machine_name = NULL) {
     '{{kit}}.info',
     'scss/{{kit}}.style.scss',
     'scss/base/_{{kit}}.variables.scss',
-    'js/{{kit}}.script.js',
+    'assets/js/{{kit}}.script.js',
 
   );
   foreach ($files_to_rename as $file_to_rename_path) {

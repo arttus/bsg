@@ -13,7 +13,7 @@ gulp.task('init', function () {
     'use strict';
     gulp.src('sass/**/*.scss')
         .pipe(sass().on('error', sass.logError))
-        .pipe(gulp.dest('./css/'));
+        .pipe(gulp.dest('./assets/css/'));
   });
 
 // Watch task //
@@ -39,6 +39,6 @@ gulp.task('sass', function () {
     'use strict';
     return gulp.src("sass/*.scss")
         .pipe(sass())
-        .pipe(gulp.dest("css"))
+        .pipe(gulp.dest("./assets/css"))
         .pipe(browserSync.stream());
   });

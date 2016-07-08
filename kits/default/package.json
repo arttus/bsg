@@ -5,7 +5,7 @@
   "description": "{{Description}}",
   "dependencies": {
     "bootstrap-sass": "^3.3.6",
-    "font-awesome": "^4.5.0",
+    "font-awesome": "^4.6.4",
     "compass-mixins": "~1.0.2"
   },
   "devDependencies": {
@@ -23,7 +23,7 @@
     "gulp-watch": "^4.3.3"
   },
   "scripts": {
-    "postinstall": "find node_modules/ -name '*.info' -type f -delete"
+    "postinstall": "sh npm_post.sh"
   },
   "author": "Arttus",
   "license": "MIT",

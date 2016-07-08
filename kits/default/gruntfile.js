@@ -10,17 +10,26 @@ module.exports = function (grunt) {
   grunt.initConfig({
     pkg: grunt.file.readJSON('package.json'),
 
+    copy: {
+      main: {
+        files: [
+          // Vendor scripts.
+          {  expand: true, cwd: 'node_modules/bootstrap-sass/', src: ['**'],  dest: 'assets/bootstrap-sass/' },
+          {expand: true, cwd: 'node_modules/font-awesome/',  src: ['**'],  dest: 'assets/font-awesome/'  },
+        ],
+      },
+    },
     // Compile SASS files into minified CSS.
     sass: {
-      options: {
-        includePaths: ['node_modules/bootstrap-sass/assets/stylesheets']
-      },
+      // options: {
+      //   includePaths: ['assets/bootstrap-sass/assets/stylesheets']
+      // },
       dist: {
         options: {
           outputStyle: 'compressed'
         },
         files: {
-          'css/style.css': 'sass/{{machine_name}}.style.scss'
+          'assets/css/proartistsupply.style.css': 'sass/proartistsupply.style.scss'
         }
       }
     },
@@ -41,7 +50,7 @@ module.exports = function (grunt) {
       dev: {
         bsFiles: {
           src: [
-            'css/*.css'
+            'assets/css/*.css'
           ]
         },
         options: {

@@ -19,6 +19,7 @@ This starter theme assumes that you have:
 - Bootstrap in your themes folder (This is based off of this theme)
 - Jquery 1.9.1 or higher (Use jQuery_Update module for Drupal)
 - NPM (Node Package Manager) (NPM Version 2.x or greater)
+- Grunt, Gulp or compass installed in your dev enviroment 
 
 
 ## Setup {#setup}
@@ -29,8 +30,9 @@ installation.
 
 ## Using NPM, Grunt or Gulp in workflow {#npm}
 
-Next run `grunt init` to copy the bootstrap files and compile SASS for the
-first  time into the css folder.
+Next run `grunt copy` to move bootstrap-sass and font-awesome to the assets diretory.
+
+Next run `grunt init` to compile SASS for the first time into the css folder.
 
 {.alert.alert-warning} **WARNING:** Do not modify the files inside of
 `./subtheme/bootstrap-sass` directly. Doing so may cause issues when upgrading

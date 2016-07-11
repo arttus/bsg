@@ -3,6 +3,7 @@
 body.ctools-modal-open {
   overflow: hidden;
 }
+
 #modalContent {
   .modal-content {
     width: 100%;
@@ -103,12 +104,5 @@ body.ctools-modal-open {
   }
   .form-item-exposed-use-pager {
     display: block;
-  }
-  #panopoly-form-widget-preview {
-    width: 50%;
-    float: right;
-    .container {
-      width: auto;
-    }
   }
 }

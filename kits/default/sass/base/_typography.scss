@@ -1,2 +1,23 @@
 // Typography
 // -----------------------------------------------------------------------------
+
+
+//quotes
+q,
+blockquote {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+  hanging-punctuation: first;
+}
+
+h1.title,
+blockquote p {
+  hanging-punctuation: first;
+}
+
+q:before {
+  content: open-quote;
+
+}
+q:after {
+  content: close-quote;
+}

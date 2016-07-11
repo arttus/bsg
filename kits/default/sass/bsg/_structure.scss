@@ -10,6 +10,7 @@
   height: 100%;
   width: auto;
 }
+
 #site-name {
   float: left;
 }
@@ -53,7 +54,7 @@
   list-style: none outside none;
   margin: 0 0 18px;
   padding: 0;
-  @extend %clearfix;
+  @include clearfix;
 
   > li {
     float: left;
@@ -247,6 +248,7 @@ ul.dropdown-menu li {
     }
   }
 }
+
 .view-header {
   .date-nav-wrapper {
     h3 {

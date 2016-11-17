@@ -32,7 +32,7 @@ installation.
 
 ## Using NPM, Grunt or Gulp in workflow {#npm}
 
-Next run `grunt copy` to move bootstrap-sass and font-awesome to the assets diretory.
+Next run `grunt copy` to move bootstrap-sass and font-awesome to the assets directory.
 
 Next run `grunt init` to compile SASS for the first time into the css folder.
 

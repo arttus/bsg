@@ -16,7 +16,7 @@ function bsg_drush_command() {
   $items['bsg'] = array(
     'description' => 'Create a Bootstrap Generator subtheme.',
     'arguments' => array(
-      'name'         => 'The name of your subtheme.',
+      'name' => 'The name of your subtheme.',
     ),
     'options' => array(
       'machine_name' => 'The machine-readable name of your subtheme. This will be auto-generated from the human-readable name if ommited.',
@@ -111,7 +111,7 @@ function drush_bsg($name = NULL, $machine_name = NULL) {
     )));
     if ($filepath = drush_download_file($kit_url)) {
       $filename = basename($filepath);
-      $dirname =  basename($filepath, '.zip');
+      $dirname = basename($filepath, '.zip');
 
       // Decompress the zip archive.
       drush_tarball_extract($filename, $dirname, TRUE);
@@ -135,13 +135,13 @@ function drush_bsg($name = NULL, $machine_name = NULL) {
 
     if ($filepath = drush_download_file(BOOTSWATCH_URL)) {
       $filename = basename($filepath);
-      $dirname =  basename($filepath, '.zip');
+      $dirname = basename($filepath, '.zip');
 
       // Decompress the zip archive.
       drush_tarball_extract($filename, $dirname, TRUE);
 
       // Copy bootswatch theme to subtheme.
-      $bootswatch_path = $subtheme_path . '/scss/bootswatch/';
+      $bootswatch_path = $subtheme_path . '/sass/bootswatch/';
       drush_print($bootswatch_path);
       drush_move_dir($dirname . '/bsg-bootswatch-master/' . $bootswatch, $bootswatch_path, TRUE);
     }
@@ -172,6 +172,8 @@ function drush_bsg($name = NULL, $machine_name = NULL) {
     'includes/form.inc',
     'includes/maintenance.inc',
     'includes/menu.inc',
+    'includes/nav.inc',
+    'includes/node.inc',
     'includes/panel.inc',
     'includes/structure.inc',
     'includes/theme.inc',
@@ -180,8 +182,7 @@ function drush_bsg($name = NULL, $machine_name = NULL) {
     'includes/view.inc',
     'gruntfile.js',
     'gulpfile.js',
-
-    'scss/' . $kit . '.style.scss',
+    'sass/' . $kit . '.style.scss',
   );
   foreach ($files_to_replace as $file_to_replace) {
     drush_op('bsg_file_str_replace', $subtheme_path . '/' . $file_to_replace, array_keys($alterations), $alterations);
@@ -190,8 +191,8 @@ function drush_bsg($name = NULL, $machine_name = NULL) {
   // Rename files.
   $files_to_rename = array(
     '{{kit}}.info',
-    'scss/{{kit}}.style.scss',
-    'scss/base/_{{kit}}.variables.scss',
+    'sass/{{kit}}.style.scss',
+    'sass/base/_{{kit}}.variables.scss',
     'assets/js/{{kit}}.script.js',
 
   );

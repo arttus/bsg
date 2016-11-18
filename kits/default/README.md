@@ -74,10 +74,10 @@ The `./subtheme/sass/_overrides.scss` file contains various Drupal overrides to
 properly integrate with the [Bootstrap Framework]. It may contain a few
 enhancements, feel free to edit this file as you see fit.
 
-The `./subtheme/sass/{machine_name}}.style.scss` file is the glue that combines the
+The `./subtheme/sass/{{machine_name}}.style.scss` file is the glue that combines the
 `_bootstrap.scss` and `_overrides.scss` files together. Generally, you will not
 need to modify this file unless you need to add or remove files to be imported.
-This is the file that you should compile to `./subtheme/css/{machine_name}}.styles.css` (note
+This is the file that you should compile to `./subtheme/css/{{machine_name}}.styles.css` (note
 the same file name, using a different extension of course).
 
 ## Override Theme Settings {#settings}

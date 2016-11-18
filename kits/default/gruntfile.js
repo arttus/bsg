@@ -29,7 +29,7 @@ module.exports = function (grunt) {
           outputStyle: 'compressed'
         },
         files: {
-          'assets/css/proartistsupply.style.css': 'sass/proartistsupply.style.scss'
+          'assets/css/{{machine_name}}.style.css': 'sass/{{machine_name}}.style.scss'
         }
       }
     },
